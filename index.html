@@ -807,7 +807,19 @@
     align-self: flex-start;
   }
 
-  /* RESPONSIVE additions */
+  /* THE SETUP — affiliate section */
+.setup { padding: 6rem 3rem; position: relative; z-index: 2; }
+.setup-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+.setup-item { background: var(--black); padding: 2.5rem 2rem; min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: inherit; transition: background 0.2s; }
+.setup-item:not(.coming-soon):hover { background: rgba(200,144,42,0.06); }
+.setup-item.coming-soon { opacity: 0.4; cursor: default; pointer-events: none; }
+.setup-category { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem; }
+.setup-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1; }
+.setup-desc { font-size: 0.75rem; color: var(--text-dim); line-height: 1.6; flex-grow: 1; }
+.setup-cta { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-top: 1.5rem; }
+.setup-disclaimer { font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--text-dim); margin-top: 2rem; opacity: 0.5; }
+
+/* RESPONSIVE additions */
   @media (max-width: 900px) {
     .now { padding: 4rem 1.5rem; }
     .now-grid { grid-template-columns: 1fr; }
@@ -1054,6 +1066,38 @@
 
 <div class="section-divider"></div>
 
+<!-- THE SETUP -->
+<section class="setup" id="setup">
+  <div class="section-label">The Setup</div>
+  <div class="setup-grid">
+    <a href="https://razer.a9yw.net/0G9q13" target="_blank" rel="noopener" class="setup-item">
+      <div><div class="setup-category">// Peripherals</div><div class="setup-name">Razer</div><div class="setup-desc">The gear on the desk. Mice, keyboards, headsets. Built for people who actually use their setup.</div></div>
+      <div class="setup-cta">Shop Razer \u2192</div>
+    </a>
+    <a href="https://amzn.to/3PRX6Ql" target="_blank" rel="noopener" class="setup-item">
+      <div><div class="setup-category">// Chair</div><div class="setup-name">Herman Miller Embody</div><div class="setup-desc">Best purchase I've made in a decade. Back pain gone. Worth every dollar.</div></div>
+      <div class="setup-cta">View on Amazon \u2192</div>
+    </a>
+    <div class="setup-item coming-soon">
+      <div><div class="setup-category">// Clothing</div><div class="setup-name">Huckberry</div><div class="setup-desc">Outdoor-inspired everyday wear. The kind of stuff that works whether you're in a meeting or on a trail.</div></div>
+      <div class="setup-cta">Coming Soon</div>
+    </div>
+    <div class="setup-item coming-soon">
+      <div><div class="setup-category">// AI Tools</div><div class="setup-name">AI Stack</div><div class="setup-desc">The tools I actually run. Jasper, Frase, Copy.ai — what makes the operation move.</div></div>
+      <div class="setup-cta">Coming Soon</div>
+    </div>
+    <div class="setup-item coming-soon">
+      <div><div class="setup-category">// Espresso</div><div class="setup-name">La Marzocco</div><div class="setup-desc">The machine. Linea Mini. If you know, you know.</div></div>
+      <div class="setup-cta">Coming Soon</div>
+    </div>
+    <a href="https://x.com/thedoomshot" target="_blank" rel="noopener" class="setup-item">
+      <div><div class="setup-category">// Always Open</div><div class="setup-name">Ask on X</div><div class="setup-desc">Want to know what I'm running before you buy? DM me. I'll tell you straight.</div></div>
+      <div class="setup-cta">@thedoomshot \u2192</div>
+    </a>
+  </div>
+  <div class="setup-disclaimer">// Some links above are affiliate links. I earn a small commission if you buy — at no extra cost to you. I only list what I actually use.</div>
+</section>
+<div class="section-divider"></div>
 <!-- EMAIL CAPTURE -->
 <section class="email-section">
   <div class="email-inner">
